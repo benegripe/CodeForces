@@ -1,4 +1,5 @@
 #http://codeforces.com/contest/551/problem/A
+#Problem solved by Benegripe with Python 2.7
 
 #!/usr/bin/python
 
