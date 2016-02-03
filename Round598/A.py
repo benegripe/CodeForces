@@ -2,17 +2,21 @@
 #solved by Benegripe
 #!/usr/bin/py
 
+def sum_neg(x):
+    base = 2
+    while (base <= x):
+        base *= 2
+    base -= 1
+    return -base
+
 n = int(raw_input())
-for i in range(1,n+1):
-    res = -1
+for i in range(0,n):
     t = int(raw_input())
-    if (0 == t % 2):
-        res = (1 + t)*t/2
+    if (1 == t % 2):
+        sol = t*(t+1)/2
     else:
-        res = (1 + (t-1))*(t-1)/2
-    print res
-    while (t > 0 and  0 == t % 2):
-        t -= 1
-    print t
-    res -= 2*t
-    print res
+        sol = t*(t-1)/2
+        sol += t
+    num = sum_neg(t)
+    sol += 2*num
+    print sol
